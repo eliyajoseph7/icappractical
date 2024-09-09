@@ -92,7 +92,7 @@
                                                         class="px-4 py-3 w-[50px] font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                         {{ $loop->iteration }}</th>
                                                     <td class="px-4 py-3 whitespace-nowrap">
-                                                        {{ $dt->title }}</td>
+                                                        {{ Str::limit($dt->title, 20, '...') }}</td>
                                                     <td colspan="4" class="px-4 py-3 whitespace-nowrap">
                                                         {{ Str::limit($dt->description, 50, '...') }}</td>
                                                     <td class="px-4 py-3 whitespace-nowrap">
