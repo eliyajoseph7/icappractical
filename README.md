@@ -8,9 +8,9 @@
     - For development:
     ```bash
     npm run dev 
-
+```
     - For production:
     ```bash
     npm run build
-
+```
     This step is required for Tailwind CSS styles to take effect. 
