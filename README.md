@@ -4,11 +4,10 @@
 
    ```bash
    php artisan serve
-2. **Compile Tailwind CSS and JavaScript:
+2. **Compile Tailwind CSS and JavaScript:**
     - For development:
     ```bash
-        npm run dev 
-        ```
+        npm run dev```
     - For production:
         ```bash
         npm run build
