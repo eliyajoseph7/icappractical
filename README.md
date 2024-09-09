@@ -7,10 +7,10 @@
 2. **Compile Tailwind CSS and JavaScript:
     - For development:
     ```bash
-    npm run dev 
-```
+        npm run dev 
+        ```
     - For production:
-    ```bash
-    npm run build
-```
+        ```bash
+        npm run build
+        ```
     This step is required for Tailwind CSS styles to take effect. 
