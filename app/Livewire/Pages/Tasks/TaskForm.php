@@ -36,6 +36,7 @@ class TaskForm extends Component
                 'title' => $task->title,
                 'description' => $task->description,
                 'percentage' => $task->percentage,
+                'status' => $task->status,
                 'due_date' => $task->due_date->format('Y-m-d'),
             ];
         } else {

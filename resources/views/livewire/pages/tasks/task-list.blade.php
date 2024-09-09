@@ -75,6 +75,9 @@
                                                     'name' => 'user_id',
                                                     'displayName' => 'Created By',
                                                 ])
+                                                <th scope="col" class="px-4 py-3 w-[100px]">
+                                                    Remaining Days
+                                                </th>
                                                 <th scope="col" class="px-4 py-3 w-[100px] float-end">
                                                     <span class="sr-only">Actions</span>
                                                 </th>
@@ -91,16 +94,19 @@
                                                     <td class="px-4 py-3 whitespace-nowrap">
                                                         {{ $dt->title }}</td>
                                                     <td colspan="4" class="px-4 py-3 whitespace-nowrap">
-                                                        {{ Str::limit($dt->description, 70, '...') }}</td>
+                                                        {{ Str::limit($dt->description, 50, '...') }}</td>
                                                     <td class="px-4 py-3 whitespace-nowrap">
                                                         {{ $dt->due_date?->format('M d, Y') }}</td>
                                                     <td class="px-4 py-3 whitespace-nowrap">
                                                         {{ $dt->created_at->format('M d, Y') }}</td>
                                                     <td class="px-4 py-3 whitespace-nowrap">
-                                                        <span class="{{ $dt->status == 'pending' ? 'text-sky-500 bg-sky-100/50' : ($dt->status == 'on-progress' ? 'text-teal-500 bg-teal-100/50' : 'text-green-500  bg-green-100/50') }} px-2 py-0.5 rounded-md">{{ $dt->status }}</span>
+                                                        <span
+                                                            class="{{ $dt->status == 'pending' ? 'text-sky-500 bg-sky-100/50' : ($dt->status == 'on-progress' ? 'text-teal-500 bg-teal-100/50' : 'text-green-500  bg-green-100/50') }} px-2 py-0.5 rounded-md">{{ $dt->status }}</span>
                                                     </td>
                                                     <td class="px-4 py-3 whitespace-nowrap">
                                                         {{ $dt->user?->name }}</td>
+                                                    <td class="px-4 py-3 whitespace-nowrap">
+                                                        {{ $dt->remain_days }}</td>
                                                     <td class="px-4 py-3 flex items-center justify-end space-x-1">
                                                         <a title="View" href="{{ route('task_view', $dt->id) }}"
                                                             class="px-1 bg-gray-300 hover:bg-blue-700 text-white rounded">
@@ -124,7 +130,7 @@
                                                                         d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
                                                                 </svg>
                                                             </button>
-                                                            @else
+                                                        @else
                                                             <button title="Mark as completed"
                                                                 class="px-2.5 text-gray-700 hover:text-gray-500 rounded cursor-not-allowed">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
