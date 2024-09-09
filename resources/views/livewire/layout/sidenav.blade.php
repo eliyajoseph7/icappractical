@@ -22,7 +22,7 @@
 
                 <li>
                     <a href="{{ route('task_list') }}"
-                        class="flex items-center p-2 rounded-lg dark:text-white {{ in_array(Route::currentRouteName(), ['task_list', 'task_form', 'task_form_edit', 'task_view']) ? 'bg-sky-100/80 text-sky-900 font-bold hover:bg-sky-100/80' : 'font-normal text-gray-700 hover:text-sky-900 hover:bg-sky-100/80' }} dark:hover:bg-gray-700 group">
+                        class="flex items-center p-2 rounded-lg dark:text-white {{ in_array(Route::currentRouteName(), ['task_list', 'task_form', 'task_form_edit', 'task_view']) ? 'bg-sky-100/20 text-sky-700 font-bold hover:bg-sky-100/80' : 'font-normal text-gray-700 hover:text-sky-900 hover:bg-sky-100/80' }} dark:hover:bg-gray-700 group">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
