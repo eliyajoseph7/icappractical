@@ -1,4 +1,4 @@
-<th scope="col" class="px-4 py-3 {{ $visibility ?? '' }}">
+<th scope="col" colspan="{{ isset($colspan) ? $colspan : 1 }}" class="px-4 py-3 {{ $visibility ?? '' }}">
     <button class="flex items-center" wire:click="sortColumn('{{ $name }}')">
         {{ $displayName }}
         @if ($sortBy == $name)
