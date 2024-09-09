@@ -2,7 +2,7 @@
     <x-slot name="header">
         @include('includes.breadcrumb', [
             'main' => '',
-            'menu' => 'Task Management',
+            'menu' => 'Tasks Management',
         ])
     </x-slot>
     <div>
